@@ -1,0 +1,39 @@
+products.forEach(element=>{
+    if(element.category=== categoryId){
+        return element,
+             console.log(element)
+    }
+})
+
+
+
+
+
+ return (
+        <Layout
+            title={category && category.name}
+            description={
+                category &&
+                category.description &&
+                category.description.substring(0, 100)
+            }
+            className="container-fluid"
+        >
+            
+            
+                 <div className="col-8">
+                 <div className="row">
+                  {newDataForId.map((product, i) => (
+                      
+                  <span key={i}  className="col-4 mb-3 ">
+                  <ProductCard product={product } />
+                  
+                  </span>
+            
+                        
+                        ))}
+               </div>
+               </div>
+               
+        </Layout>
+    );
